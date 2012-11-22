@@ -1,0 +1,22 @@
+@import 'colors';
+
+.photo
+{
+  float: left;
+  margin-right: 10px;
+
+  .image
+  {
+    margin-bottom: 10px;
+    background-color: $photo-bg-color;
+    padding: 15px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+  }
+
+  img
+  {
+    border: 1px solid $photo-bd-color;
+  }
+}

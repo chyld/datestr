@@ -1,0 +1,13 @@
+<%= form_for @question do |f| %>
+  <div class='field'>
+    <%= label_tag :question %>
+    <%= f.text_field :question_text %>
+  </div>
+  <div class='field'>
+    <input type="button" id="add_answer" value="Add Answer" />
+  </div>
+  <div id='answers'></div>
+  <div class='field'>
+    <%= f.submit %>
+  </div>
+<% end %>

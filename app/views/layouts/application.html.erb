@@ -8,7 +8,18 @@
 </head>
 <body>
 
-<%= yield %>
+  <header><p>datestr<p><p>dating for hipsters</p></header>
+  <nav>
+    <%= link_to "home", root_path %>
+    |
+    <%= link_to "about", about_path %>
+    |
+    <%= link_to "faq", faq_path %>
+    |
+    <%= display_links %>
+  </nav>
+  <section><%= yield %></section>
+  <footer>(c) 2012 Chyld Medford</footer>
 
 </body>
 </html>

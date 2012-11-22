@@ -1,0 +1,9 @@
+<div class='photo'>
+  <div class='image'>
+    <%= link_to image_tag(photo.filename.thumb.url), photo_path(photo) %>
+  </div>
+  <%= form_tag '/photos/primary' do %>
+    <%= hidden_field_tag 'id', photo.id %>
+    <%= submit_tag 'Make Primary' if !photo.is_primary %>
+  <% end %>
+</div>

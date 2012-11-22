@@ -1,0 +1,13 @@
+<%= form_for @photo do |f| %>
+  <div class='field'>
+    <%= f.label :local %>
+    <%= f.file_field :filename %>
+  </div>
+  <div class='field'>
+    <%= f.label :remote %>
+    <%= f.text_field :remote_filename_url %>
+  </div>
+  <div class='field'>
+    <%= f.submit %>
+  </div>
+<% end %>

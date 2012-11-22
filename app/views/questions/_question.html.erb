@@ -1,0 +1,8 @@
+<div class='question'>
+  <div class='text'><%= question.question_text %></div>
+  <ul>
+    <% question.answers.each do |answer| %>
+      <li><%= '*' if answer.is_correct %><%= answer.answer_text %></li>
+    <% end %>
+  </ul>
+</div>

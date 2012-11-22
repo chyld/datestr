@@ -1,0 +1,47 @@
+@import 'colors';
+@import url(http://fonts.googleapis.com/css?family=Average+Sans);
+
+body
+{
+  background-color: $body-bg-color;
+  font-family: 'Average Sans', sans-serif;
+  font-size: 13px;
+  color: $font-color;
+}
+
+header
+{
+  background-color: $header-bg-color;
+  font-size: 50px;
+  padding: 20px 10px 20px 10px;
+}
+
+nav
+{
+  background-color: $nav-bg-color;
+  padding: 20px 10px 20px 10px;
+  border-top: 1px solid $nav-bd-color;
+  border-bottom: 1px solid $nav-bd-color;
+}
+
+section
+{
+  padding: 10px;
+}
+
+footer
+{
+  padding: 10px;
+  margin-top: 50px;
+}
+
+a
+{
+  color: $link-color;
+  text-decoration: none;
+}
+
+.clear
+{
+  clear: both;
+}

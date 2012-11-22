@@ -1,0 +1,27 @@
+@import 'colors';
+
+.field
+{
+  margin-bottom: 10px;
+
+  label
+  {
+    display: block;
+  }
+
+  input[type='text'], input[type='password'], input[type='number'], textarea
+  {
+    border: 1px solid $nav-bg-color;
+    background-color: $form-bg-color;
+    padding: 5px;
+    width: 250px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+  }
+
+  textarea
+  {
+    height: 100px;
+  }
+}
