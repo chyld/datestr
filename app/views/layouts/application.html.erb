@@ -8,15 +8,23 @@
 </head>
 <body>
 
-  <header><p>datestr<p><p>dating for hipsters</p></header>
+  <header>
+    <div id='title'>
+      <p>datestr</p>
+      <p>dating for hipsters</p>
+    </div>
+    <div id='search'><%= render 'shared/search' %></div>
+    <div class='clear'></div>
+  </header>
   <nav>
-    <%= link_to "home", root_path %>
-    |
-    <%= link_to "about", about_path %>
-    |
-    <%= link_to "faq", faq_path %>
-    |
-    <%= display_links %>
+    <div id='left-nav'>
+      <%= link_to "home", root_path %>
+      <%= display_links %>
+    </div>
+    <div id='right-nav'>
+      <%= yield :altnav %>
+    </div>
+    <div class='clear'></div>
   </nav>
   <section><%= yield %></section>
   <footer>(c) 2012 Chyld Medford</footer>

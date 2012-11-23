@@ -1,0 +1,11 @@
+<h1>send message</h1>
+<%= form_for @message, :url => '/messages' do |f| %>
+  <div class='field'>
+    <h1><%= @profile.username %></h1>
+    <%= hidden_field_tag 'message[receiver_id]', @profile.id %>
+    <%= f.text_area :message_text %>
+  </div>
+  <div class='field'>
+    <%= f.submit %>
+  </div>
+<% end %>

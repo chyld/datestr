@@ -1,0 +1,14 @@
+<div class='profile'>
+  <h1><%= link_to profile.username, userprofile_path(profile) %></h1>
+  <div class='tagline'><%= profile.tagline %></div>
+  <ul>
+    <li><%= profile.age %>, <%= profile.gender %></li>
+    <li><%= profile.city %>, <%= profile.state %></li>
+    <li><%= profile.ethnicity %></li>
+  </ul>
+  <p><%= profile.description %></p>
+  <div class='photos'>
+    <%= render :partial => 'photos/photo', :collection => profile.photos, :as => :photo %>
+  </div>
+  <div class='clear'></div>
+</div>

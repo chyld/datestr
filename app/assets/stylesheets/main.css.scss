@@ -6,22 +6,58 @@ body
   background-color: $body-bg-color;
   font-family: 'Average Sans', sans-serif;
   font-size: 13px;
-  color: $font-color;
+  color: $text-color;
 }
 
 header
 {
   background-color: $header-bg-color;
-  font-size: 50px;
   padding: 20px 10px 20px 10px;
+  color: $header-text-color;
+
+  #title
+  {
+    float: left;
+    font-size: 50px;
+
+    p
+    {
+      line-height: 30px;
+    }
+  }
+
+  #search
+  {
+    float: right;
+  }
+
+  .inline-field
+  {
+    input[type='text'], input[type='number']
+    {
+      width: 150px;
+    }
+  }
 }
 
 nav
 {
   background-color: $nav-bg-color;
   padding: 20px 10px 20px 10px;
-  border-top: 1px solid $nav-bd-color;
-  border-bottom: 1px solid $nav-bd-color;
+
+  a
+  {
+    padding-right: 20px;
+  }
+
+  #left-nav
+  {
+    float: left;
+  }
+  #right-nav
+  {
+    float: right;
+  }
 }
 
 section
@@ -35,10 +71,33 @@ footer
   margin-top: 50px;
 }
 
+h1
+{
+  color: $nav-bg-color;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+input
+{
+  color: $input-text-color;
+}
+
 a
 {
   color: $link-color;
   text-decoration: none;
+}
+
+a:hover
+{
+  text-decoration: underline;
+}
+
+p
+{
+  line-height: 15px;
+  padding: 5px 0px 5px 0px;
 }
 
 .clear

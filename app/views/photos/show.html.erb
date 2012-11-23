@@ -1,2 +1,8 @@
+<% content_for :altnav do %>
+  <%= link_to("add photo", photos_new_path) %>
+<% end %>
+
+<h1>photo</h1>
+<div class='clear'></div>
 <%= render :partial => 'photo', :locals => {:photo => @photo} %>
 <div class='clear'></div>

@@ -11,13 +11,14 @@
 
   input[type='text'], input[type='password'], input[type='number'], textarea
   {
-    border: 1px solid $nav-bg-color;
+    color: $form-text-color;
+    border: 1px solid $form-bd-color;
     background-color: $form-bg-color;
-    padding: 5px;
+    padding: 3px;
     width: 250px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
   }
 
   textarea

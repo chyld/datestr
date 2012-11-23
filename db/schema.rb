@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121121210513) do
+ActiveRecord::Schema.define(:version => 20121123002751) do
 
   create_table "answers", :force => true do |t|
     t.string   "answer_text"
@@ -27,6 +27,14 @@ ActiveRecord::Schema.define(:version => 20121121210513) do
     t.boolean  "is_match"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "messages", :force => true do |t|
+    t.text     "message_text"
+    t.integer  "sender_id"
+    t.integer  "receiver_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "photos", :force => true do |t|

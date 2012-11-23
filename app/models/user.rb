@@ -20,6 +20,11 @@ class User < ActiveRecord::Base
   has_secure_password
   has_many :self_initiated, :class_name => 'Match', :foreign_key => 'sender_id'
   has_many :other_initiated, :class_name => 'Match', :foreign_key => 'receiver_id'
+  has_many :messages_sent, :class_name => 'Message', :foreign_key => 'sender_id'
+  has_many :messages_received, :class_name => 'Message', :foreign_key => 'receiver_id'
   has_many :photos
   has_many :questions
+  def headshot
+    self.photos.where(:is_primary => true).first
+  end
 end

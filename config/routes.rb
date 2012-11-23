@@ -12,6 +12,7 @@ Datestr::Application.routes.draw do
   get '/profile/edit' => 'users#edit'
   get '/profile' => 'users#show'
   put '/profile' => 'users#update'
+  get '/profile/:id' => 'users#show', :as => 'userprofile'
 
   post '/photos/primary' => 'photos#primary'
   get '/photos/new' => 'photos#new'
@@ -20,6 +21,14 @@ Datestr::Application.routes.draw do
   get '/photos/:id' => 'photos#show', :as => 'photo'
 
   resources :questions
+
+  get '/search' => 'search#results'
+
+  get '/messages' => 'messages#index'
+  get '/messages/:id/new' => 'messages#new', :as => 'new_message'
+  post '/messages' => 'messages#create'
+  get '/messages/:id' => 'messages#show', :as => 'message'
+  post '/messages/answer' => 'messages#answer'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

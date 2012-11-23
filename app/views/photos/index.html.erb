@@ -1,2 +1,8 @@
+<% content_for :altnav do %>
+  <%= link_to("add photo", photos_new_path) %>
+<% end %>
+
+<h1>photos</h1>
+<div class='clear'></div>
 <%= render :partial => 'photo', :collection => @auth.photos, :as => :photo %>
 <div class='clear'></div>

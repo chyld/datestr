@@ -1,0 +1,7 @@
+<% content_for :altnav do %>
+  <%= link_to "send message", new_message_path(@message.sender) %>
+<% end %>
+
+<h1>message</h1>
+<%= render :partial => 'message', :locals => {:message => @message} %>
+<div class='clear'></div>

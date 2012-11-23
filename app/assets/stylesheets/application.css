@@ -3,4 +3,6 @@
  *= require 'main'
  *= require 'forms'
  *= require 'photo'
+ *= require 'profile'
+ *= require 'message'
  */

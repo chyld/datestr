@@ -1,6 +1,11 @@
 class UsersController < ApplicationController
   before_filter :ensure_logged_in
   def show
+    if params[:id]
+      @profile = User.find(params[:id])
+    else
+      @profile = @auth
+    end
   end
   def edit
   end

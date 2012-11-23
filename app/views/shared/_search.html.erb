@@ -1,0 +1,21 @@
+<%= form_tag '/search', :method => :get do %>
+  <div class='inline-field'>
+    <%= number_field_tag 'search[age]' %>
+    <%= label_tag 'age' %>
+  </div>
+  <div class='inline-field'>
+    <%= text_field_tag 'search[gender]' %>
+    <%= label_tag 'gender' %>
+  </div>
+  <div class='inline-field'>
+    <%= text_field_tag 'search[state]' %>
+    <%= label_tag 'state' %>
+  </div>
+  <div class='inline-field'>
+    <%= text_field_tag 'search[ethnicity]' %>
+    <%= label_tag 'ethnicity' %>
+  </div>
+  <div class='inline-field'>
+    <%= submit_tag 'Search' %>
+  </div>
+<% end %>

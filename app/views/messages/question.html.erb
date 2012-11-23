@@ -1,0 +1,16 @@
+<h1>dealbreaker</h1>
+<%= form_tag '/messages/answer' do %>
+  <div class='field'>
+    <%= label_tag @question.question_text %>
+    <%= hidden_field_tag 'question', @question.id %>
+  </div>
+  <% @question.answers.each do |answer| %>
+    <div class='field'>
+      <%= radio_button_tag 'answer', answer.id %>
+      <%= answer.answer_text %>
+    </div>
+  <% end %>
+  <div class='field'>
+    <%= submit_tag 'Submit Answer' %>
+  </div>
+<% end %>
